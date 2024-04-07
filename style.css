@@ -153,5 +153,6 @@ body{
   .container__botão:hover{
     background-color: var(--botão-azul-efeito);
     color: var(--cor-de-fundo);
+    font-weight: bold;
 }
 

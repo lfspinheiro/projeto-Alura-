@@ -1,0 +1,157 @@
+:root {
+    --branco-principal: #FFFFFF;            /* os dois traços (--) criam variáveis no CSS */
+    --cinza-secundário: #C0C0C0;
+    --botão-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: "Inter";
+    --botão-azul-efeito: #c1d6f0;
+}
+
+body{
+    background-color: var(--cor-de-fundo);         /* chamando as variáveis var() */
+    color: var(--branco-principal);                /* os "valores" no body valem para a página inteira */
+    font-family: var(--fonte-principal);           /* mas eu posso fazer diferenciações dentro das class */
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;                            /* alinha não só o texto, mas todos os elementos do container */
+}
+
+.container{
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__botão{
+    background-color: var(--botão-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.botão_secundário{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal)
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundário)
+}
+
+.container__título{
+    font-size: 28px;
+    weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;        /* margin é para os quatro lados, mas posso fazer um por uma (top, right, bottom e left) */
+}                               /* margin = espaçamento externo, padding = espaçamento interno */
+
+.container__caixa{
+    margin: 0 6em;              /* dá também pra por dois valores, 1º é top-bottom, 2º é right-left */
+}
+
+.secundário__imagem{
+    width: 80%;
+    }
+
+.secundário{
+    align-items: center;
+    margin: 0 10em
+}
+
+.descrição__título{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descrição__texto{
+    color: var(--cinza-secundário);
+}
+
+.secundário__botão{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descrição{
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;                   /* transpõe uma lista de coluna para linha */
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__título{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+    color:var(--branco-principal);
+}
+
+.rodapé__lista{
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.rodapé{
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color:var(--branco-principal);
+    margin-left: 1em;
+    font-size: 14px;  
+}
+
+.rodapé__texto{
+    margin: 1em 0;
+    color: var(--cinza-secundário);
+    font-size: 14px;
+  }
+
+.lista__link a:hover{                          /* hover = efeito quando passa o mouse  */
+    color: var(--botão-azul);
+  }
+
+  .lista__link a:active {                      /* hover = efeito enquanto está clicando  */
+    color: orange;
+  }
+
+  .container__botão:hover{
+    background-color: var(--botão-azul-efeito);
+    color: var(--cor-de-fundo);
+}
+
